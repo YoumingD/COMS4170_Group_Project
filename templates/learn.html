@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='learn.css')}}">
+<div class="container">
+	<br>
+	<div class="row">
+		<div class="col-12">
+			<div class="background_color3 top_bottom_padding bolder2">
+				<div class="row">
+					<div class="col-8">
+						<div class="center">
+							<h1>Sign for: {{ content['sign_name']}}</h1>
+						</div>
+						<div class="padding_around_video center">
+							<video controls="" name="media"><source src={{ content['video'] }} type="video/mp4"></video>
+						</div>
+					</div>
+					<div class="col-4">
+						<span class="font_color1">Time learning sign for {{ content['sign_name']}}:</span>
+						<span id="timer"></span>
+						<div >
+							<img alt="image of sign for {{content['sign_name']}}" src="{{content['image']}}" id="sign_image" class="img-fluid image2 image_margin">
+						</div>
+						<br>
+						<div>
+							<span id="learn_text">{{ content['text'] }}</span>
+						</div>
+					</div>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+<!--	<div class="row">-->
+<!--		<div >-->
+<!--			<img alt="image of sign for {{content['sign_name']}}" src="{{content['image']}}" id="sign_image" class="img-fluid">-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<div class="row">-->
+<!--		<span id="learn_text">{{ content['text'] }}</span>-->
+<!--	</div>-->
+	<div class="row fixed-bottom background_color1 top_bottom_padding">
+			<div class="col-6 center">
+				<button id="prev_btn" class="btn btn-primary">Previous</button>
+			</div>
+			<div class="col-6 center">
+				<button id="next_btn" class="btn btn-primary">Next</button>
+			</div>
+		</div>
+	</div>
+</div>
+  <script>
+	let content = {{ content|tojson }};
+	let curr_page = parseInt(content["id"]);
+	let db_size = {{ db_size }};
+</script>
+<script type="text/javascript" src="{{url_for('static', filename='learn.js')}}">
+</script>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+<script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
+
+<script>
+
+</script>
+
+<div class="container">
+    <div class="row margin4">
+        <div class="col-6">
+            <img src="https://www.libraryvisit.org/wp-content/uploads/2020/04/ASL-e1586954731372.jpeg"
+                 alt="asl" class="image1">
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-12">
+                    <div class="center color1 font_size1 margin1 margin3">
+                        This website teaches you how to give directions in American Sign Language (ASL)!
+                    </div>
+                    <div class="color2 center margin1 font_size2">
+                        Click the button below to start learning!
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="center margin2">
+                        <button id="golearn" class="btn btn-primary" onclick="location.href ='http://127.0.0.1:5000/learn/1'">Learn !</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--        <div>-->
+<!--            <video controls="" name="media1"><source src="https://www.signingsavvy.com/media/mp4-ld/8/8805.mp4" type="video/mp4"></video>-->
+<!--        </div>-->
+    </div>
+</div>
+
+{% endblock %}

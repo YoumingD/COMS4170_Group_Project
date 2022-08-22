@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='quiz.css')}}">
+<div class="container p-0" id="top_container">
+    <div class="row" id="top_row">
+        <div class="col-12" id="top_col">
+            <div class="background_color3 bolder2 main_border overflow-hidden">
+                <div class="row" id="top_question_row">
+                    <div class="col-12">
+                        <div class="center">
+                            <h1>{{content['question']}}</h1>
+                        </div>
+                        <div id="result_feedback"></div>
+                        <div class="p10 center map_div">
+                            {% if content['media'] != '' %}
+                                <img src="{{content['media']}}" id="sign_image" class="map img-fluid">
+                            {% endif %}
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row m-1" id = "ques_int_wrapper">
+                    <div id = "question_interaction">
+                    </div>
+                </div>
+                <div class="row fixed-bottom background_color1">
+                    <div class="col-6 center">
+                        <button id="prev_btn" class="btn btn-primary">Previous</button>
+                    </div>
+                    <div class="col-6 center">
+                        <button id="next_btn" class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let content = {{ content|tojson }};
+    let curr_page = parseInt(content["id"]);
+    let db_size = {{ db_size }};
+    let drag_options = {
+        "1": "-1",
+        "2": "-1",
+        "3": "-1",
+        "4": "-1"
+    };
+    let user_activiy = {{ user_activiy|tojson }};
+
+    for(idx in user_activiy["options"]) {
+        let post = parseInt(idx) + 1;
+        drag_options[post.toString()] = user_activiy["options"][idx];
+    }
+
+</script>
+<script type="text/javascript" src="{{url_for('static', filename='quiz.js')}}">
+</script>
+{% endblock %}

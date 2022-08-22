@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<link rel="stylesheet" href="{{url_for('static', filename='result.css')}}">
+
+<div class="container">
+    <div class="row margin1">
+        <div class="col-12 center font_size1">
+            You have finished the Quiz!
+        </div>
+        <div class="col-12 center font_size1">
+            Quiz Score
+        </div>
+    </div>
+    <div class="row bolder1">
+        <div class="col-6 font_size2 padding1">
+            <span>Total Questions: 10</span>
+            <br><br><br>
+            <span class="color1" id="correct_answers">Correct Answers:</span>
+            <br><br><br>
+            <span class="color2" id="wrong_answers">Wrong Answers:</span>
+        </div>
+        <div class="col-6">
+            <div id="piechart"></div>
+        </div>
+    </div>
+
+    <div class="row margin2">
+<!--        <div class="col-6 position1">-->
+<!--            <button id="review" class="btn btn-primary">Review Quizzes</button>-->
+<!--        </div>-->
+        <div class="col-12 position1">
+            <button id="backhome" class="btn btn-primary" onclick="location.href='/quiz/reset/home'">Back to home</button>
+        </div>
+    </div>
+    <br><br><br>
+</div>
+
+<script>
+    var total_score = {{ total_score }};
+    var correct = {{ correct }};
+    var wrong = total_score - correct;
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'result.js') }}"></script>
+
+{% endblock %}

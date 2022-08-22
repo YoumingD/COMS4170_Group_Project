@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	  <!-- Required meta tags -->
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="icon" href="data:,">
+  
+	<!-- jquery -->
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+	</head>
+	<body>
+	<div class="container head_container">
+		<div class="row">
+			<div class="col-12 center font_size_1 backgroung_color1 top_bottom_padding">
+				How to Give Directions in ASL
+			</div>
+		</div>
+		<div class="row backgroung_color2 top_bottom_padding">
+			<div class="col-4 center">
+				<button id="home" class="btn btn-primary" onclick="location.href='/'">Home</button>
+			</div>
+			<div class="col-4 center">
+				<button id="learn" class="btn btn-primary" onclick="location.href='http://127.0.0.1:5000/learn/1'">Learn</button>
+			</div>
+			<div class="col-4 center">
+				<button id="quiz" class="btn btn-primary" onclick="location.href='http://127.0.0.1:5000/quiz/reset'">Quiz</button>
+			</div>
+		</div>
+		<br>
+	</div>
+		{% block content %}
+        {% endblock %}
+	</body>
+</html>
