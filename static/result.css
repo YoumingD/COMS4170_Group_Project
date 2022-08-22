@@ -1,0 +1,59 @@
+.center {
+    text-align: center;
+}
+
+.color1 {
+    color: darkgreen;
+}
+
+.color2 {
+    color: red;
+}
+
+.font_size1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.font_size2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.margin1 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.margin2 {
+    margin-top: 30px;
+}
+
+.image1 {
+    width: 100%;
+}
+
+.bolder1 {
+    margin: auto;
+    border-radius: 25px;
+    background: #e4f3e4;
+    width: 800px;
+    height: 400px;
+}
+
+.position1 {
+    text-align: center;
+}
+
+.position2 {
+    text-align: right;
+}
+
+.padding1 {
+    padding-top: 70px;
+    padding-left: 30px;
+}
+
+body {
+    background-color: whitesmoke;
+}

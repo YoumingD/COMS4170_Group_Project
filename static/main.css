@@ -1,0 +1,21 @@
+.center {
+    text-align: center;
+}
+
+.font_size_1 {
+    font-size: 44px;
+    font-weight: bold;
+}
+
+.backgroung_color1 {
+    background-color: #64ba64;
+}
+
+.backgroung_color2 {
+    background-color: #dadada;
+}
+
+.top_bottom_padding {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

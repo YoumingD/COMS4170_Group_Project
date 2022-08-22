@@ -1,0 +1,50 @@
+.center {
+    text-align: center;
+}
+
+.color1 {
+    color: darkgreen;
+}
+
+.color2 {
+    color: darkseagreen;
+}
+
+.font_size1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.font_size2 {
+    font-size: 18px;
+}
+
+.font_size3 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.margin1 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.margin2 {
+    margin-top: 20px;
+}
+
+.margin3 {
+    margin-top: 120px;
+}
+
+.margin4 {
+    margin-top: 20px;
+}
+
+.image1 {
+    width: 100%;
+}
+
+body {
+    background-color: whitesmoke;
+}
